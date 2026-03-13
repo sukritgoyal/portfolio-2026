@@ -146,6 +146,28 @@ export default function BentoGrid() {
             <p className="text-sm text-gray-400 font-light">
               Open to roles in Systems Engineering, Infrastructure, and Applied AI. Currently based in Delhi.
             </p>
+            <div className="flex items-center gap-3 pt-4">
+              <span className="font-mono text-xs text-gray-600">Connect:</span>
+              <div className="flex items-center gap-4 font-mono text-xs">
+                <a
+                  href="https://github.com/sukritgoyal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-cyan-400 transition-colors duration-200"
+                >
+                  [ GITHUB ]
+                </a>
+                <div className="h-3 w-[1px] bg-gray-700" />
+                <a
+                  href="https://linkedin.com/in/sukrit-goyal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-cyan-400 transition-colors duration-200"
+                >
+                  [ LINKEDIN ]
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

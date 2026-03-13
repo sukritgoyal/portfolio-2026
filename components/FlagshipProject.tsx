@@ -14,18 +14,26 @@ export default function FlagshipProject({ onClick }: FlagshipProjectProps) {
       transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
     >
       <div className="group relative rounded-lg border border-[#2a2a2a] bg-black/40 backdrop-blur-sm overflow-hidden hover:border-[#3a3a3a] transition-colors duration-300 cursor-pointer" onClick={onClick}>
-        {/* Video Placeholder */}
-        <div className="relative h-64 bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center overflow-hidden">
-          {/* Subtle animated background elements */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/20 rounded-full filter blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-blue-500/10 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          </div>
-
-          {/* Placeholder Text */}
-          <div className="relative text-center">
-            <p className="text-gray-500 text-sm font-mono mb-2">[ VIDEO_DEMO ]</p>
-            <p className="text-xs text-gray-600">Sack Counter in action</p>
+        {/* Video Section */}
+        <div className="relative h-[500px] bg-black overflow-hidden rounded-t-lg">
+          <video
+            src="/media/demo.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          
+          {/* Dark Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+          
+          {/* Video Demo Badge */}
+          <div className="absolute top-4 right-4 z-10">
+            <span className="font-mono text-xs text-gray-400 bg-black/50 px-3 py-1.5 rounded border border-gray-600/30 backdrop-blur-sm">
+              [ VIDEO_DEMO ]
+            </span>
           </div>
         </div>
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FiArrowRight } from 'react-icons/fi'
+import { FiArrowRight, FiGithub, FiLinkedin } from 'react-icons/fi'
 
 export default function HeroCard() {
   return (
@@ -60,18 +60,36 @@ export default function HeroCard() {
         </div>
 
         {/* Footer Meta */}
-        <div className="flex items-center gap-6 pt-6">
-          <a
-            href="#projects"
-            className="group flex items-center gap-2 text-sm font-semibold tracking-widest uppercase text-white hover:text-cyan-400 transition-all duration-300"
-          >
-            Explore Work
-            <FiArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-          </a>
+        <div className="flex items-center gap-8 pt-6">
           <div className="h-4 w-[1px] bg-gray-800" />
           <span className="font-mono text-[12px] text-gray-600 uppercase tracking-tighter">
             Based in Delhi, India
           </span>
+          <div className="h-4 w-[1px] bg-gray-800" />
+          <div className="flex items-center gap-4">
+            <motion.a
+              href="https://github.com/sukritgoyal"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-gray-500 hover:text-white transition-colors duration-200"
+              aria-label="GitHub"
+            >
+              <FiGithub className="w-5 h-5" />
+            </motion.a>
+            <motion.a
+              href="https://linkedin.com/in/sukrit-goyal"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-gray-500 hover:text-white transition-colors duration-200"
+              aria-label="LinkedIn"
+            >
+              <FiLinkedin className="w-5 h-5" />
+            </motion.a>
+          </div>
         </div>
       </div>
     </motion.div>
